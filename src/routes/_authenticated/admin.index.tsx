@@ -37,7 +37,7 @@ function AdminOverview() {
               { label: "Channels", value: String(d?.totalChannels ?? 0) },
               { label: "Active subscriptions", value: String(d?.activeSubscriptions ?? 0) },
               { label: "Revenue (all time)", value: formatPrice(d?.revenue ?? 0, "USD") },
-            ]].flat().map((s) => (
+            ].map((s) => (
               <div key={s.label} className="surface-card p-5">
                 <p className="text-sm text-muted-foreground">{s.label}</p>
                 <p className="mt-2 font-display text-2xl font-bold">{s.value}</p>
